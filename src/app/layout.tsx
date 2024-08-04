@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { VercelToolbar } from "@vercel/toolbar/next";
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-black text-white text-3xl`}>
         {children}
+        <VercelToolbar />
       </body>
     </html>
   );
