@@ -5,7 +5,7 @@ export const allowExpensiveAI = flag({
   description: "Use the expensive AI model",
   decide: async () => {
     const response = await fetch(
-      "https://jherr-feature-flags.s3.us-west-1.amazonaws.com/flags.json"
+      "<<<your external JSON URL>>>"
     );
     const flags = await response.json();
     return flags["expensive-ai"];
